@@ -1,11 +1,6 @@
 import OpenAI from 'openai';
 const openai = new OpenAI({
-  baseURL: 'https://openrouter.ai/api/v1',
-  apiKey: process.env.OPENAI_API_KEY,
-  defaultHeaders: {
-    'HTTP-Referer': process.env.YOUR_SITE_URL || 'http://localhost:3000', // Optional: for OpenRouter app rankings
-    'X-Title': process.env.YOUR_SITE_NAME || 'Dream Interpreter',        // Optional: for OpenRouter app rankings
-  },
+  apiKey: process.env.OPENAI_API_KEY
   });
 
 // Call OpenAI API for dream interpretation
