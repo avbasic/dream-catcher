@@ -39,7 +39,8 @@ app.get('/health', async (req, res) => {
       status: 'error',
       db: 'disconnected',
       message: err.message,
-      uptime: process.uptime()
+      uptime: process.uptime(),
+      n:1
     })
   }
 });
