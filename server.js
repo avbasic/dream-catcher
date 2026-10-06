@@ -41,7 +41,7 @@ app.get('/health', async (req, res) => {
       uptime: process.uptime()
     })
   }
-})
+});
 
 
 // API Routes
