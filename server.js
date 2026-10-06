@@ -59,10 +59,10 @@ app.get('/shutdown', (req, res) => {
 
 // API Routes
 app.use('/api/dreams', dreamsRouter);
-
+let server;
 // Initialize database then start server
 initDatabase().then(() => {
-  app.listen(PORT, () => {
+  server = app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
   });
 }).catch(error => {
